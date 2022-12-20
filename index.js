@@ -46,9 +46,16 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is the URL of the github repo?",
-        name: "url"
+        name: "test",
+        message: "What command should be used to run tests?",
+        default: "npm test"
+    },
+    {
+        type: "input",
+        name: "contributors",
+        message: "Who are the contributors of this repo?",
     }
+
 ];
 
 
@@ -61,8 +68,8 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
         .then((inquirerAnswers) => {
-            console.log("Generating.... Please wait....");
-            writeToFile("./dist/README.md", generateMarkdown({ ...inquirerAnswers }));
+            console.log("Generating...");
+            writeToFile("./distribution/README.md", generateMarkdown({ ...inquirerAnswers }));
         })
 }
 
