@@ -21,7 +21,7 @@ const questions = [
     {
         type: "input",
         message: "Are there any installation instructions for your project?",
-        name: "installation"   
+        name: "dependencies"   
     },
     {
         type: "input",
@@ -48,7 +48,6 @@ const questions = [
         type: "input",
         name: "test",
         message: "What command should be used to run tests?",
-        default: "npm test"
     },
     {
         type: "input",
